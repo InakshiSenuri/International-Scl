@@ -1,0 +1,246 @@
+body{
+    /* color: #FEFAE0; */
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    /* background-image: linear-gradient(to-right ,#FEFAE0,#ABC4AA); */
+}
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-image: linear-gradient(#ABC4AA,#FEFAE0);
+}
+.logo img{
+    width: 120px;
+    height: auto;
+}
+.name h2{
+    color: black;
+    font-size: 35px;
+}
+.name-logo{
+    display: flex;
+    flex-direction:row ;
+    /* display: inline; */
+    
+}
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.navbar a{
+    text-decoration: none;
+    font-size: 20px;
+    padding: 15px 25px;
+    display: inline;
+    color: black;
+}
+.drop-list{
+    display: none;
+}
+.dropdown .navbutt{
+    font-size: 20px;
+    font-family: inherit;
+    border: none;
+    color: black;
+    outline: none;
+    padding: 15px 20px;
+    background-color: transparent;
+    margin: 0;
+    
+}
+.dropdown{
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.navbar a:hover,.dropdown .navbutt:hover{
+    font-weight: bold;
+}
+.drop-list{
+    float: none;
+    
+    background-color: #FEFAE0;
+    position:absolute;
+    top: 100%;
+    left: 0;
+    max-width: 140px;
+    z-index: 2; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius: 2px;
+
+}
+.drop-list a{
+    font-size: 20px;
+    display: block;
+    text-decoration: none;
+    text-align: left;
+    color: #A9907E;
+}
+.drop-list a:hover{
+    font-weight: bold;
+}
+.dropdown:hover .drop-list{
+    display: block;
+}
+.bgFooter{
+    background-image: url("./img/pic2.jpg");
+    opacity: 0.3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1vw;
+    z-index: -2;
+    margin-top: 3vh;
+    width: 100%;
+    height: 100%;
+    padding-top: 0;
+    position: absolute;
+
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    
+    
+    
+    height: 1500px;
+    
+    /* top: 50%;
+    left: 50%; */
+}
+
+.heading h3{
+    color: #A9907E;
+    font-size: 35px;
+    text-decoration: underline;
+    margin: 120px auto 50px auto;
+    text-align: center;
+
+}
+.bg-peice{
+    background-color: #FAEDCD;
+    position: relative;
+    height: 350px;
+    width: 45%;
+    opacity: 0.5;
+    top: 10%;
+    left: 60%;
+    
+    
+}
+.bg-peice2{
+    background-color: #FAEDCD;
+    position: relative;
+    height: 350px;
+    width: 45%;
+    opacity: 0.5;
+    top: 25%;
+    
+    
+    
+}
+.set{
+    position: absolute;
+    top:10%;
+    left: 10%;
+    max-width: 80%;
+    animation: slide-up 2s;
+    margin-top: 0%;
+    
+}
+.set2{
+    position: absolute;
+    top:85%;
+    left: 10%;
+    right: 5%;
+    max-width: 85%;
+    animation: slide-up 2s;
+    margin-top: 0%;
+}
+.para{
+    font-size: 22px;
+    text-align: center;
+    margin: 20px;
+    line-height: 1.5;
+}
+.princi{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+}
+.princi img{
+    height: 400px;
+
+}
+.princi caption{
+    padding-top: 5px;
+    font-size: large;
+}
+
+@keyframes slide-up {
+    from {
+        margin-top: 5%;
+    }
+    to{
+        margin-top: 0%;
+    }
+}
+
+.footer{
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding: 1vw;
+    margin-top: 3vh;
+    border-radius: 1rem;
+    padding-top: 0;
+    position: relative;
+
+}
+.add {
+    font-size: 3vh;
+    color: black;
+    padding: 2px;
+    text-align: center;
+
+}
+
+
+.tag h2{
+    font-size: 4vh;
+    color: black;
+    text-align: center;
+    z-index: 2;
+
+}
+.sociallinks{
+    max-width: max-content;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.sociallinks img{
+    margin-top: 15px;
+    background-color: transparent;
+    border-radius: 2rem;
+    width:2vw;
+    height:4vh ;
+    margin: 1vw;
+    border: 0px solid #A9907E;
+    z-index: 99999;
+
+}

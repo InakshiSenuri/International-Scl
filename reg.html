@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="reg.css" rel="stylesheet">
+    <title>Document</title>
+    <script type="text/javascript">
+        function gender_validation(sex){
+            var x=0;
+
+            if(sex[0].checked){
+                x++;
+            }
+            if (sex[1].checked){
+                x++;
+            }
+            if(x == 0){
+                return false;
+            }
+            else{
+                return true;
+            }
+
+        }
+        function language_validation(noneng,eng){
+            if(noneng.checked || eng.checked){
+                return true;
+            }
+            else{
+                return false;
+            }
+
+        }
+
+        function country_validation(country){
+            if(country == "Default"){
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+
+        function form_validation(myform){
+            var uname = myform.uname.value;
+            var pass = myform.pass.value;
+            var fname = myform.fname.value;
+            var address = myform.add.value;
+            var country = myform.cntry.value;
+            var zip = myform.zcode.value;
+            var mail = myform.email.value;
+            var returnvalue=false;
+            // var female = myform.sex;
+
+            var sex = myform.sex;
+            var noneng = document.getElementById("neng");
+            var eng = document.getElementById("eng");
+            // var about = myform.about.value;
+            var a=true;
+            var b=true;
+            var c=true;
+            var d=true;
+
+
+            if (uname == "" || pass == "" || fname == "" || country == "" || mail == ""){
+                alert("Please fill the empty fields");
+                a = false;
+            }
+
+            if(country_validation(country) == false){
+                alert("Please select a country");
+                b = false;
+            }
+            if(gender_validation(sex) == false){
+                alert("Please select your gender");
+                c = false;
+            }
+            if(language_validation(noneng,eng) == false){
+                alert("Please select your language preferance");
+                d = false;
+            }
+            if (a==true && b==true && c==true && d==true){
+                returnvalue=true;
+            }
+
+            return returnvalue;
+
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <div class="brand">
+            <div class="logo">             
+                <img src="./img/newlogo-removebg-preview.png">
+            </div>
+            <div class="name"><h2>APEX International Collage</h2></div>
+        </div>
+        <div class="back">
+            <a href="home.html">
+            <img src="./img/icons8-chevron-left-48.png"></a>
+        </div>
+        
+    </div>
+    <div class="body">
+        <div class="form-side">
+            <div class="topic">
+                <h1>Sign Me Up</h1>
+            </div>
+            <div class="form-sec">
+                
+                <form name="myform">
+                    <div class="topic2"><p>Fill this Registration Form</p></div>
+                    <div class="form-element">
+                        <p class="label">User Name: </p>
+                        <input type="text" id="uname" name="uname">
+                    </div>
+                    <div class="form-element">
+                        <p class="label">Password: </p>
+                        <input type="password" id="pass" name="pass">
+                    </div>
+                    <div class="form-element">
+                        <p class="label"> Full name :</p>
+                        <input type="text" id="fname" name="fname">
+                    </div>
+                    <div class="form-element">
+                        <p class="label">Address: </p>
+                        <input type="text" id="add" name="add">
+                    </div>
+                    <div class="form-element">
+                        <p class="label">Country : </p>
+                        <select id="country" name="cntry">
+                            <option value="Default">---Select---</option>
+                            <option value="SL">Sri Lanka</option>
+                            <option value="IND">India</option>
+                            <option value="USA">USA</option>
+                        </select>
+                    </div>
+                    <div class="form-element">
+                        <p class="label">ZIP code:</p>
+                        <input type="text" id="zcode" name="zcode">
+                    </div>
+                    <div class="form-element">
+                        <p class="label">Email: </p>
+                        <input type="email" id="email" name="email">
+                    </div>
+                    <div class="form-element">
+                        <p class="label">Sex: </p>
+                        <input type="radio" id="sex" name="sex" value="F"> <p class="text2">FEMALE</p>
+                        <input type="radio" id="sex" name="sex" value="M"> <p class="text2">MALE</p>
+                    </div>
+                    <div class="form-element">
+                        <p class="label">Language</p>
+                        <input type="checkbox" value="eng" id="eng" name="eng"> <p class="text2">ENGLISH</p>
+                        <input type="checkbox" value="neng" id="neng" name="neng"> <p class="text2">NON ENGLISH</p>
+                    </div>
+                    <div class="form-element">
+                        <p class="label">About</p>
+                        <textarea id="about" name="about"></textarea>
+                    </div>
+                    <div class="form-element">
+                        <input type="submit" id="submit" value="Submit" onclick="return form_validation(this.form);">
+                        <input type="reset" id="reset" value="Reset">
+                    </div>
+    
+                </form>
+                
+            </div>
+        </div>
+        <div class="img-side">
+            <!-- <img src="./img/girl.jpg"> -->
+        </div>
+
+    </div>
+    
+    <div class="footer">
+            <div class="bgFooter"></div>
+            <div class="companyinfo">
+
+                <div class="tag">
+                    <h2>Find Out More</h2>
+                </div>
+                <div class="add">
+                   <b> Address</b> :APEX International, Hendala, Wattala.<br>
+                   <b>Phone</b>: +94112049600<br>
+                   <b>Email</b>: info@apexscl.com 
+                </div>
+            </div>
+            <br>
+            
+            <div class="sociallinks">
+                <a href="https://www.facebook.com/tourismsrilanka.gov.lk" target="_blank"><img src="./img/facebook-icon.png" ></a>
+                <a href="https://www.youtube.com/user/srilankatravelvideo" target="_blank"><img src="./img/youtube-icon.png"></a>
+                <a href="https://twitter.com/tourismlk" target="_blank"><img src="./img/twitter-icon.png"></a>
+                <a href="https://www.instagram.com/destination_srilanka/" target="_blank"><img src="./img/instagram-icon.png" ></a>       
+            </div>
+        
+        
+    </div>
+</body>
+</html>

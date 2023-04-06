@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link href="login.css" rel="stylesheet">
+    <script type="text/javascript">
+        function empty_validation(myform){
+            var uname = myform.uname.value;
+            var pswd = myform.pswd.value;
+            var returnvalue = true;
+
+            if(uname =="" || pswd == ""){
+                alert("Enter password and username");
+                returnvalue = false;
+
+            }
+            return returnvalue;
+
+        }
+    </script>
+</head>
+<body>
+    <div class="fill">
+        <img  src="./img/St-Josephs-Institution-International.jpg" class="fill-img">
+        <div class="box">
+            <div class="head">
+                <div class="logo">
+                    <a href="home.html">
+                   <img src="./img/newlogo-removebg-preview.png"></a>
+                </div>
+                <div class="top">
+                    <h2>LOGIN</h2>
+                </div>
+            </div>
+            <div class="form">
+            <form name="myform">
+                <div class="input">
+                    <input type="text" name="uname" id="uname" placeholder="Username ">
+                </div>
+                <div class="input">
+                    <input type="password" name="pswd" id="pswd" placeholder="Password">
+                </div>
+            </div>
+            
+            <div class="but">
+                <button type="submit" value="submit" onclick="return(empty_validation(this.form));">Login</button>
+            </div>
+            </form>
+            <div class="reg-link">
+                <p><a class="signup"  href = "reg.html">New here? Click to Join.</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
