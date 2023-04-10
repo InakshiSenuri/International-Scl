@@ -8,7 +8,7 @@
     <link href="contact.css" rel="stylesheet">
 </head>
 <body>
-    <div class="body">
+
         <div class="header">
             <div class="name-logo">
                 <div class="logo">
@@ -35,29 +35,32 @@
             </div>
         </div>
         <div class="fill">
-            <img  src="./img/20170317_d_SJIIM-Brochure-Shoot-2017-247.jpg" class="fill-img">
+            <div>
+                <img  src="./img/20170317_d_SJIIM-Brochure-Shoot-2017-247.jpg" class="fill-img">
+            </div>
+            
 
             <div class="msg-box">
                 <div class="topic">
                     <h2>Let's Talk...</h2>
                 </div>
                
-                    <form action="#">
+                    <form action="contact.html" >
                         <div class="form-element">
                             <p class="label">Your Name: </p>
-                            <input type="text" id="username">
+                            <input type="text" id="username" name="username"/>
                         </div>
                         <div class="form-element">
                             <p class="label">Email: </p>
-                            <input type="email" id="email">
+                            <input type="email" id="email" name="email"/>
                         </div>
                         <div class="form-element">
-                            <p class="label">Massage: </p>
-                            <textarea id="about"></textarea>
+                            <p class="label">Massege: </p>
+                            <textarea id="about" name="massege"></textarea>
                         </div>
                         <div class="form-element">
-                            <input type="submit" id="submit" value="Send">
-                            <input type="reset" id="reset" value="Clear">
+                            <input type="submit" id="submit" value="Send"/>
+                            <input type="reset" id="reset" value="Clear"/>
                         </div>
                     </form>
                     
@@ -82,6 +85,9 @@
                 <a href="https://www.instagram.com/destination_srilanka/" target="_blank"><img src="./img/instagram-icon.png" ></a>       
             </div>
         </div>
-    </div>
+    
 </body>
+<!-- <script type="text/javascript">
+
+</script> -->
 </html>

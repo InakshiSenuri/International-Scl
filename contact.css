@@ -1,8 +1,9 @@
-.body{
+body{
     /* color: #FEFAE0; */
     /* overflow-x: hidden; */
     /* background-image: linear-gradient(to-right ,#FEFAE0,#ABC4AA); */
     z-index: -5;
+    overflow-x: hidden;
 }
 .header{
     width: 100%;
@@ -102,7 +103,7 @@
     /* overflow: hidden; */
     
     background-size: cover;
-    z-index: -2;
+    z-index: 0;
 }
 .fill-img{
     /* min-height: 100%; */

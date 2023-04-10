@@ -53,6 +53,11 @@ body{
     display: flex;
     flex-direction: row;
 }
+.form-element-butt{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 /* .form-element2{
     display: block;
     position: relative;
@@ -68,16 +73,29 @@ form{
     font-size: 25px;
     width: 20%;
 }
-input[type = "text"],input[type = "password"],select,input[type = "email"]{
+input[type = "text"],input[type = "password"],input[type = "email"]{
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 48%;
     padding: 19px;
     border-radius: 10px;
     margin: 18px auto;
     font-size: 15px;
     color:black;
     cursor: pointer;
+}
+select{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    padding: 22px;
+    border:  1em;
+    border-radius: 10px;
+    margin: 18px auto;
+    font-size: 15px;
+    color:black;
+    cursor: pointer;
+
 }
 textarea{
     display: flex;
@@ -92,14 +110,14 @@ textarea{
     cursor: pointer;
 }
 input[type = "radio"],input[type = "checkbox"]{
-    margin-left: 10%;
+    margin-left: 15%;
     width: 2%;
     border: #675D50 solid 2px;
 }
 .text2{
     font-size: 19px;
     display: flex;
-    justify-content: center;
+    padding-left: 5px;
     align-items: center;
     width: 20%;
 }
@@ -121,6 +139,7 @@ input[type = "reset"],input[type = "submit"]{
 input[type = "reset"]:hover,input[type = "submit"]:hover {
     background-color: #675D50;
     color: #FEFAE0;
+    align-items: center;
     /* font-weight: bold; */
 }
 .bgFooter{
